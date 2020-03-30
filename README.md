@@ -8,7 +8,7 @@ make sure, ssh-agent is forwarded between configured stages by adding 'ForwardAg
 
 add in Capfile:
 
-require 'synchronizer' 
+require 'synchronizer'
 
 ## adopt config/deploy/stage...
 
@@ -22,6 +22,12 @@ require 'synchronizer'
 dump database, pack assets and download ...
 
 ``cap staging sync:local``
+
+dump database, pack assets and download. keeps db-file remote...
+
+``cap staging sync:local:keep``
+
+
 
 dump database and download...
 
