@@ -66,10 +66,11 @@ namespace :sync do
 
     namespace :to_local do
       desc 'create db-dump and copy to local (but keep remote dump)'
-      task :keep
-      on roles :db do
-        invoke 'sync:db:dump'
-        copy_db_to_local
+      task :keep do
+        on roles :db do
+          invoke 'sync:db:dump'
+          copy_db_to_local
+        end
       end
     end
 
