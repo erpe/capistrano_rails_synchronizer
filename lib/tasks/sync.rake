@@ -113,8 +113,10 @@ namespace :sync do
     namespace :to_local do
       desc 'copy assets to local (but keep artifacts remotely)'
       task :keep do
-        invoke 'sync:assets:pack'
-        copy_assets_to_local
+        on roles :web do
+          invoke 'sync:assets:pack'
+          copy_assets_to_local
+        end
       end
     end
 
