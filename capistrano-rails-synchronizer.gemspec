@@ -1,6 +1,6 @@
 Gem::Specification.new do |gem|
   gem.name          = 'capistrano-rails-synchronizer'
-  gem.version       = '0.3.2'
+  gem.version       = '0.4.0'
   gem.authors       = ['rene paulokat']
   gem.email         = ['rene@so36.net']
   gem.description   = %q{Rails specific Capistrano tasks to synchonize stages}
@@ -15,6 +15,6 @@ Gem::Specification.new do |gem|
                         'lib/tasks/sync.rake']
   #gem.cert_chain = ['certs/rp.pem']
   #gem.signing_key = File.expand_path("~/.ssh/gem-private_key.pem") if $0 =~ /gem\z/
-  gem.add_dependency 'capistrano-rails', '~> 1.1'
+  gem.add_dependency 'capistrano-rails', '~> 1.6.3'
   gem.post_install_message = "thanks for all the fish and \nadd 'require \"synchronizer\"' to your Capfile"
 end
